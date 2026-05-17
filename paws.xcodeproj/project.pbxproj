@@ -10,9 +10,22 @@
 		893B4EE52FB89C14003F22FC /* paws.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = paws.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		893B4EF42FB9886D003F22FC /* Exceptions for "paws" folder in "paws" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 893B4EE42FB89C14003F22FC /* paws */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		893B4EE72FB89C14003F22FC /* paws */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				893B4EF42FB9886D003F22FC /* Exceptions for "paws" folder in "paws" target */,
+			);
 			path = paws;
 			sourceTree = "<group>";
 		};
@@ -260,8 +273,10 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = paws/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Paws;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -295,8 +310,10 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = paws/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Paws;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
