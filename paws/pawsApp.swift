@@ -10,8 +10,13 @@ import SwiftUI
 @main
 struct pawsApp: App {
     var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+        MenuBarExtra(
+            content: { MenuBarView() },
+            label: {
+                Image(.pawsIdle)
+                    .resizable()
+                    .scaledToFit()
+            }
+        )
     }
 }
