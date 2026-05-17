@@ -18,5 +18,6 @@ struct pawsApp: App {
                     .scaledToFit()
             }
         )
+        .menuBarExtraStyle(.window)
     }
 }
