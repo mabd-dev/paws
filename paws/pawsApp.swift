@@ -24,5 +24,12 @@ struct pawsApp: App {
             }
         )
         .menuBarExtraStyle(.window)
+        
+        Window(
+            "About Paws",
+            id: "about",
+            content: { AboutView() }
+        )
+        .windowResizability(.contentSize)
     }
 }

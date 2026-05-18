@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MenuBarView: View {
     
+    @Environment(\.openWindow) var openWindow
     @Environment(KeyboardLockManager.self) var keyboardLockManager: KeyboardLockManager
 
     var body: some View {
@@ -44,7 +45,8 @@ struct MenuBarView: View {
                 .padding(.vertical, 4)
 
             Button("About Paws") {
-                print("open about page")
+                NSApp.activate(ignoringOtherApps: true)
+                openWindow(id: "about")
             }
             .buttonStyle(MenuRowButtonStyle())
             
