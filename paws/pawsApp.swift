@@ -9,11 +9,16 @@ import SwiftUI
 
 @main
 struct pawsApp: App {
+    @State var keyboardLockManager = KeyboardLockManager()
+
     var body: some Scene {
         MenuBarExtra(
-            content: { MenuBarView() },
+            content: {
+                MenuBarView()
+                    .environment(keyboardLockManager)
+            },
             label: {
-                Image(.pawsIdle)
+                Image(keyboardLockManager.locked ? .pawsActive : .pawsIdle)
                     .resizable()
                     .scaledToFit()
             }

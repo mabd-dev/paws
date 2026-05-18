@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MenuBarView: View {
     
-    @State var keyboardLockManager = KeyboardLockManager()
+    @Environment(KeyboardLockManager.self) var keyboardLockManager: KeyboardLockManager
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -83,5 +83,7 @@ struct MenuRowButtonStyle: ButtonStyle {
 
 
 #Preview {
+    let keyboardLockManager = KeyboardLockManager()
     MenuBarView()
+        .environment(keyboardLockManager)
 }
