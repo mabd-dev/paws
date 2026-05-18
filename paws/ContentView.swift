@@ -21,14 +21,23 @@ struct MenuBarView: View {
 
             Button(
                 action: {
-                    print("Starting")
-                    locked.toggle()
+                    if locked {
+                        locked.toggle()
+                    } else {
+                        if !checkAccessibilityPermission() {
+                            // user would get a default permission popup
+                            print("accessibility: not trusted")
+                        } else {
+                            lockKeyboard()
+                            locked.toggle()
+                        }
+                    }
                 },
                 label: {
                     Label(
                         locked ? "Unlock Keyboard" : "Lock Keyboard",
                         systemImage: locked ? "lock.open.fill" : "lock.fill"
-                        )
+                    )
                 },
             )
             .contentTransition(.symbolEffect(.replace))
@@ -51,7 +60,18 @@ struct MenuBarView: View {
         .padding(.horizontal, 12)
         .frame(width: 200)
     }
+    
+    func checkAccessibilityPermission() -> Bool {
+        print("requesting accessibility permission")
+        let options = [kAXTrustedCheckOptionPrompt.takeUnretainedValue(): true] as CFDictionary
+        return AXIsProcessTrustedWithOptions(options)
+    }
+    
+    func lockKeyboard() {
+        // TODO: to be implemented
+    }
 }
+
 
 struct MenuRowButtonStyle: ButtonStyle {
     @State private var isHovered = false
@@ -66,6 +86,7 @@ struct MenuRowButtonStyle: ButtonStyle {
             .onHover { isHovered = $0 }
     }
 }
+
 
 #Preview {
     MenuBarView()
