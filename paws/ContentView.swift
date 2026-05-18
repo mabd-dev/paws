@@ -9,8 +9,8 @@ import SwiftUI
 
 struct MenuBarView: View {
     
-    @State private var locked = false
-    
+    @State var keyboardLockManager = KeyboardLockManager()
+
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             Text("Paws")
@@ -21,22 +21,21 @@ struct MenuBarView: View {
 
             Button(
                 action: {
-                    if locked {
-                        locked.toggle()
+                    if keyboardLockManager.locked {
+                        keyboardLockManager.unlock()
                     } else {
                         if !checkAccessibilityPermission() {
                             // user would get a default permission popup
                             print("accessibility: not trusted")
                         } else {
-                            lockKeyboard()
-                            locked.toggle()
+                            keyboardLockManager.lock()
                         }
                     }
                 },
                 label: {
                     Label(
-                        locked ? "Unlock Keyboard" : "Lock Keyboard",
-                        systemImage: locked ? "lock.open.fill" : "lock.fill"
+                        keyboardLockManager.locked ? "Unlock Keyboard" : "Lock Keyboard",
+                        systemImage: keyboardLockManager.locked ? "lock.open.fill" : "lock.fill"
                     )
                 },
             )
@@ -62,13 +61,8 @@ struct MenuBarView: View {
     }
     
     func checkAccessibilityPermission() -> Bool {
-        print("requesting accessibility permission")
         let options = [kAXTrustedCheckOptionPrompt.takeUnretainedValue(): true] as CFDictionary
         return AXIsProcessTrustedWithOptions(options)
-    }
-    
-    func lockKeyboard() {
-        // TODO: to be implemented
     }
 }
 
