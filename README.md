@@ -1,5 +1,11 @@
 # Paws 🐾
 
+
+<div align="center">
+  <img src="./paws/Assets.xcassets/AppIcon.imageset/paws-icon-1024.png" alt="App Icon" width="120">
+</div>
+
+
 > Pause your keyboard. Wipe in peace.
 
 Paws is a minimal macOS menu bar utility that locks your keyboard with one click - so you can wipe it down without triggering a nuclear launch.
