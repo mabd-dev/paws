@@ -16,9 +16,6 @@ struct MenuBarView: View {
             Text("Paws")
                 .foregroundStyle(.secondary)
             
-            Divider()
-                .padding(.vertical, 4)
-
             Button(
                 action: {
                     if keyboardLockManager.locked {
@@ -41,12 +38,13 @@ struct MenuBarView: View {
             )
             .contentTransition(.symbolEffect(.replace))
             .buttonStyle(MenuRowButtonStyle())
+            .padding(.top, 8)
             
             Divider()
                 .padding(.vertical, 4)
 
-            Button("About") {
-                print("open about page ")
+            Button("About Paws") {
+                print("open about page")
             }
             .buttonStyle(MenuRowButtonStyle())
             
