@@ -16,6 +16,12 @@ Paws is a minimal macOS menu bar utility that locks your keyboard with one click
 
 ---
 
+<div align="center">
+  <img width="232" height="175" alt="Screenshot 2026-05-19 at 6 20 29 AM" src="https://github.com/user-attachments/assets/ad36512c-c9b3-4048-bd6c-1ada5d3359da" />
+</div>
+
+
+
 ## Features
 
 - One-click keyboard lock from the menu bar
