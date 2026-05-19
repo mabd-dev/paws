@@ -24,7 +24,6 @@ struct MenuBarView: View {
                     } else {
                         if !checkAccessibilityPermission() {
                             // user would get a default permission popup
-                            print("accessibility: not trusted")
                         } else {
                             keyboardLockManager.lock()
                         }
@@ -33,8 +32,9 @@ struct MenuBarView: View {
                 label: {
                     Label(
                         keyboardLockManager.locked ? "Unlock Keyboard" : "Lock Keyboard",
-                        systemImage: keyboardLockManager.locked ? "lock.open.fill" : "lock.fill"
+                        systemImage: keyboardLockManager.locked ? "lock.fill" : "lock.open.fill"
                     )
+                    .foregroundStyle(keyboardLockManager.locked ? .red : .primary)
                 },
             )
             .contentTransition(.symbolEffect(.replace))
