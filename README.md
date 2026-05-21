@@ -10,7 +10,7 @@
 
 Paws is a minimal macOS menu bar utility that locks your keyboard with one click - so you can wipe it down without triggering a nuclear launch.
 
-![macOS](https://img.shields.io/badge/macOS-26%2B-black)
+![macOS](https://img.shields.io/badge/macOS-14%2B-black)
 ![Swift](https://img.shields.io/badge/Swift-6.3-orange)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
@@ -38,7 +38,7 @@ Paws is a minimal macOS menu bar utility that locks your keyboard with one click
 
 ## Requirements
 
-- macOS 26 (Tahoe) or later
+- macOS 14 (Sonoma) or later
 - Accessibility permission (prompted on first use)
 
 ---
