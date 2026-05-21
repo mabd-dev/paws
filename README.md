@@ -38,7 +38,7 @@ Paws is a minimal macOS menu bar utility that locks your keyboard with one click
 
 ## Requirements
 
-- macOS 14 (Sonoma) or later
+- macOS 26 (Tahoe) or later
 - Accessibility permission (prompted on first use)
 
 ---
