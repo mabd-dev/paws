@@ -44,14 +44,18 @@ Paws is a minimal macOS menu bar utility that locks your keyboard with one click
 ---
 
 ## Installation
+Download the latest release from the [Releases](../../releases) page, unzip, 
+and drag **Paws.app** to your Applications folder.
 
-Download the latest release from the [Releases](../../releases) page, unzip, and drag **Paws.app** to your Applications folder.
+> **Note:** Paws is not notarized with Apple, so macOS Gatekeeper will warn 
+> you on first launch. This is expected and safe to bypass.
 
-Since Paws is not on the Mac App Store, macOS may warn you on first launch. To open it:
+**macOS Ventura / Sonoma (13+):**
+1. Double-click **Paws.app** — you'll see *"Paws can't be opened because Apple cannot verify it."* Click **Done**.
+2. Open **System Settings → Privacy & Security**, scroll to the Security section.
+3. You'll see *"Paws was blocked from use..."* — click **Open Anyway**.
+4. Confirm by clicking **Open** in the final prompt.
 
-1. Right-click **Paws.app** in Finder
-2. Select **Open**
-3. Click **Open** in the dialog
 
 ---
 

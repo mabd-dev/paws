@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 ## Unreleased
 
 - feat: downgrade minimum deployment macos version to 14.6
+- docs: Clarify installation steps for macOS Gatekeeper warning
 
 
 ## [1.1.0] - 2026-05-17
