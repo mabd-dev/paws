@@ -38,5 +38,10 @@ struct pawsApp: App {
             content: { AboutView() }
         )
         .windowResizability(.contentSize)
+        
+        Settings {
+            SettingsView()
+                .environment(settings)
+        }
     }
 }

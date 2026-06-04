@@ -43,6 +43,11 @@ struct MenuBarView: View {
             
             Divider()
                 .padding(.vertical, 4)
+            
+            SettingsLink {
+                Text("Settings...")
+            }
+            .buttonStyle(MenuRowButtonStyle())
 
             Button("About Paws") {
                 NSApp.activate(ignoringOtherApps: true)
