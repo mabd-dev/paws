@@ -5,6 +5,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+- feat/autoLockOnStart: added a setting to auto lock keyboard when the app starts by @mabd-dev
+
 
 ## [1.2.0] - 2026-05-21
 
