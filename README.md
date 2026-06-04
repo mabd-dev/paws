@@ -27,6 +27,7 @@ Paws is a minimal macOS menu bar utility that locks your keyboard with one click
 - One-click keyboard lock from the menu bar
 - Blocks all keypresses system-wide including modifier keys (Cmd, Shift, Option etc.)
 - Menu bar icon changes to reflect locked/unlocked state
+- Auto lock keyboard when app starts (optional)
 - Lightweight — lives in the menu bar, no Dock icon
 
 ## Limitations
