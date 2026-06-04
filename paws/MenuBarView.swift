@@ -65,10 +65,7 @@ struct MenuBarView: View {
         .frame(width: 200)
     }
     
-    func checkAccessibilityPermission() -> Bool {
-        let options = [kAXTrustedCheckOptionPrompt.takeUnretainedValue(): true] as CFDictionary
-        return AXIsProcessTrustedWithOptions(options)
-    }
+    
 }
 
 

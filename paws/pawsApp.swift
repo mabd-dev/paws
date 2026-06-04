@@ -13,7 +13,7 @@ struct pawsApp: App {
     @State var settings = PawsSettings()
     
     init() {
-        if settings.autoLockOnStart {
+        if settings.autoLockOnStart && checkAccessibilityPermission() {
             keyboardLockManager.lock()
         }
     }
