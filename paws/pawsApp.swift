@@ -10,6 +10,13 @@ import SwiftUI
 @main
 struct pawsApp: App {
     @State var keyboardLockManager = KeyboardLockManager()
+    @State var settings = PawsSettings()
+    
+    init() {
+        if settings.autoLockOnStart {
+            keyboardLockManager.lock()
+        }
+    }
 
     var body: some Scene {
         MenuBarExtra(
