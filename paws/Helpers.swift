@@ -7,8 +7,9 @@
 
 import SwiftUI
 
+/// @param showPermissionRequest if true, it will automatically open settings if not trusted
 /// @return true is permission is granted
-func checkAccessibilityPermission() -> Bool {
-    let options = [kAXTrustedCheckOptionPrompt.takeUnretainedValue(): true] as CFDictionary
+func checkAccessibilityPermission(showPermissionRequest: Bool = true) -> Bool {
+    let options = [kAXTrustedCheckOptionPrompt.takeUnretainedValue(): showPermissionRequest] as CFDictionary
     return AXIsProcessTrustedWithOptions(options)
 }

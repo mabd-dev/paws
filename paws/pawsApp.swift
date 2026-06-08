@@ -13,7 +13,9 @@ struct pawsApp: App {
     @State var settings = PawsSettings()
     
     init() {
-        if settings.autoLockOnStart && checkAccessibilityPermission() {
+        let trusted = checkAccessibilityPermission(showPermissionRequest: false)
+        
+        if trusted && settings.autoLockOnStart {
             keyboardLockManager.lock()
         }
     }
