@@ -43,6 +43,11 @@ struct MenuBarView: View {
             
             Divider()
                 .padding(.vertical, 4)
+            
+            SettingsLink {
+                Text("Settings...")
+            }
+            .buttonStyle(MenuRowButtonStyle())
 
             Button("About Paws") {
                 NSApp.activate(ignoringOtherApps: true)
@@ -60,10 +65,7 @@ struct MenuBarView: View {
         .frame(width: 200)
     }
     
-    func checkAccessibilityPermission() -> Bool {
-        let options = [kAXTrustedCheckOptionPrompt.takeUnretainedValue(): true] as CFDictionary
-        return AXIsProcessTrustedWithOptions(options)
-    }
+    
 }
 
 

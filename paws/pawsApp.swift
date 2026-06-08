@@ -10,6 +10,15 @@ import SwiftUI
 @main
 struct pawsApp: App {
     @State var keyboardLockManager = KeyboardLockManager()
+    @State var settings = PawsSettings()
+    
+    init() {
+        let trusted = checkAccessibilityPermission(showPermissionRequest: false)
+        
+        if trusted && settings.autoLockOnStart {
+            keyboardLockManager.lock()
+        }
+    }
 
     var body: some Scene {
         MenuBarExtra(
@@ -31,5 +40,10 @@ struct pawsApp: App {
             content: { AboutView() }
         )
         .windowResizability(.contentSize)
+        
+        Settings {
+            SettingsView()
+                .environment(settings)
+        }
     }
 }
