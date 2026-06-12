@@ -5,6 +5,9 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+
+## [1.3.0] - 2026-06-12
+
 - feat/autoLockOnStart: added a setting to auto lock keyboard when the app starts by @mabd-dev in [#2](https://github.com/mabd-dev/paws/pull/2)
 
 
